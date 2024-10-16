@@ -4,6 +4,9 @@ public class Car {
     public Car() {
         this.numberOfDoors = 0;
     }
+    public Car(int numberOfDoors) {
+        this.numberOfDoors = numberOfDoors;
+    }
 
     public int getNumberOfDoors() {
         return numberOfDoors;
