@@ -16,4 +16,16 @@ class CarTest {
         assertEquals(numberOfDoors, this.car.getNumberOfDoors());
         assertNotEquals(numberOfDoors - 1, this.car.getNumberOfDoors());
     }
+
+    @Test
+    void setNumberOfDoors() {
+        // given
+        int numberOfDoors = 5;
+        this.car = new Car();
+        // when
+        this.car.setNumberOfDoors(numberOfDoors);
+        // then
+        assertEquals(numberOfDoors, this.car.getNumberOfDoors());
+        assertNotEquals(numberOfDoors - 1, this.car.getNumberOfDoors());
+    }
 }
