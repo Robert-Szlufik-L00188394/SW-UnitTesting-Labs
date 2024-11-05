@@ -29,8 +29,5 @@ class CarTest {
         assertNotEquals(numberOfDoors - 1, this.car.getNumberOfDoors());
     }
 
-    @Test
-    void shouldFail() {
-        assertTrue(false);
-    }
-}
+
+} 
