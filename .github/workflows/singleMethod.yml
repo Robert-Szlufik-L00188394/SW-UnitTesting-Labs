@@ -1,5 +1,4 @@
-name: Java CI Workflow
-
+name: Run Single Test
 on:
   push:
     branches: [ "main" ]
@@ -23,11 +22,11 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Run tests and generate code coverage
+      - name: Run a Single Test
         run: mvn clean test -Dtest=CarTest#getNumberOfDoors
 
-      - name: Upload Code Coverage Report
-        uses: actions/upload-artifact@v4
-        with:
-          name: code-coverage-report
-          path: target/site/*
+#      - name: Upload Code Coverage Report
+#        uses: actions/upload-artifact@v4
+#        with:
+#          name: code-coverage-report
+#          path: target/site/*
