@@ -1,9 +1,8 @@
-# This workflow will build and test a Java project using Maven
 name: Java CI Workflow
 
 on:
   push:
-    branches: [ "main", "ci" ]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
@@ -25,16 +24,7 @@ jobs:
           cache: maven
 
       - name: Run tests and generate code coverage
-        run: mvn clean test
-
-      - name: Build with Maven
-        run: mvn -B package --file pom.xml
-        
-      - name: Upload Build Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: build-artifact
-          path: target/*.jar
+        run: mvn clean test -Dtest=CarTest#getNumberOfDoors
 
       - name: Upload Code Coverage Report
         uses: actions/upload-artifact@v4
