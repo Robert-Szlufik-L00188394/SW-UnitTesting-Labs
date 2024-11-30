@@ -6,7 +6,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  run-single-test:
+  run-suite-of-tests:
 
     runs-on: ubuntu-latest
 
@@ -23,4 +23,4 @@ jobs:
           cache: maven
 
       - name: Run a Single Test
-        run: mvn clean test -Dtest=CarTest#getNumberOfDoors
+        run: mvn clean test -Dtest=CarTest
