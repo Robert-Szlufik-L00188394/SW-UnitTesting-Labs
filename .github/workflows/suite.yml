@@ -23,4 +23,4 @@ jobs:
           cache: maven
 
       - name: Run a Single Test
-        run: mvn clean test -Dtest=CarTest
+        run: mvn clean test -Dtest=vehicles.*
