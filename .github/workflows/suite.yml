@@ -1,4 +1,4 @@
-name: Run Single Test
+name: Run A Suite of Test
 on:
   push:
     branches: [ "main" ]
@@ -22,5 +22,5 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Run a Single Test
-        run: mvn clean test -Dtest=CarTest
+      - name: Run a Suite of Tests grouped by 'vehicles' tag
+        run: mvn clean test -Dgroup=vehicles

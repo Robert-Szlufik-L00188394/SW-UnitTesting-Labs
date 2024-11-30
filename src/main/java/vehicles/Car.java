@@ -1,3 +1,5 @@
+package vehicles;
+
 public class Car {
     private int numberOfDoors;
 
