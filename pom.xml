@@ -35,7 +35,7 @@
                     </execution>
                     <execution>
                         <id>report</id>
-                        <phase>test</phase>
+                        <phase>package</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
