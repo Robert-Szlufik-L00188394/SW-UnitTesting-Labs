@@ -23,4 +23,4 @@ jobs:
           cache: maven
 
       - name: Run a Suite of Tests grouped by 'vehicles' tag
-        run: mvn clean test -Dgroup=vehicles
+        run: mvn clean test -Dtest=CarSuiteTest
